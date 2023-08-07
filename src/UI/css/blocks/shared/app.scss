@@ -1,0 +1,31 @@
+@layer components {
+  .u-button {
+    @apply py-2 px-8 border border-black transition-all ease-out hover:bg-white-100 hover:text-blackR-100 text-white-100 block bg-black w-fit rounded-full dark:border-white-100;
+    &__inner {
+      @apply flex text-white-100;
+    }
+    &--plain {
+      @apply p-2 border border-black transition-all ease-out hover:bg-blackR-100 hover:text-white-100 text-blackR-100 block  w-fit rounded-full;
+    }
+    &--pink {
+      @apply py-2 px-8 border border-pink transition-all ease-out hover:bg-pink hover:text-purple text-pink block dark:border-white-100 dark:hover:bg-white-100 dark:text-white-100 dark:hover:text-blackR-100 w-fit rounded-full;
+    }
+    &--purple {
+      @apply py-2 px-8 border border-purple transition-all ease-out hover:bg-purple hover:text-white-100 text-purple block  w-fit rounded-full;
+    }
+    &--outline {
+      @apply min-w-[30%]  px-6 flex items-center  justify-center lg:w-auto lg:w-full py-4 transition-all duration-300 border rounded-full  uppercase border-pink dark:border-white-100 lg:min-w-[10rem] text-center hover:bg-pink dark:hover:bg-white-100 hover:text-purple;
+    }
+  }
+
+  .u-hidden {
+    @apply h-0 invisible opacity-0 pointer-events-none absolute;
+  }
+
+  .u-bgImage {
+    @apply w-full bg-cover h-screen bg-center;
+  }
+  .u-image {
+    @apply w-full object-cover object-center;
+  }
+}

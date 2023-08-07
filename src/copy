@@ -1,0 +1,13 @@
+import { connect } from 'react-redux';
+
+import { RootState } from '../../store';
+
+type Props = {};
+const DashboardTemp = ({}: Props) => {
+  return <div></div>;
+};
+
+const mapStateToProps = (state: RootState) => ({
+  reducer: state.reducer,
+});
+export default connect(mapStateToProps)(DashboardTemp);

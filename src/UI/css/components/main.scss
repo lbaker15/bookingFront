@@ -1,0 +1,29 @@
+@layer components {
+  .u-wrapper {
+    @apply mx-auto max-w-[1200px] w-11/12;
+  }
+  .form-1 {
+    @apply u-wrapper pb-20 pt-10;
+    form {
+      @apply grid-cols-1;
+      & > div {
+        @apply col-span-1 sm:max-w-[50%] mx-auto;
+      }
+    }
+  }
+
+  .card {
+    @apply grid grid-cols-1 md:grid-cols-4 gap-12;
+  }
+  .card__item {
+    @apply col-span-1 pb-2 block;
+  }
+
+  .u-hidden__visually {
+    @apply opacity-0 w-[1px] h-[0px] hidden pointer-events-none;
+  }
+
+  .u-button--dark {
+    @apply duration-500 bg-blackR-100 text-white-100 text-sm  rounded-xl px-4 py-1 hover:bg-blackR-50;
+  }
+}

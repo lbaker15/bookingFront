@@ -1,0 +1,16 @@
+@mixin randomL($min, $max) {
+  $random: random(); // Generate a random decimal between 0 and 1
+  $range: $max - $min + 1; // Calculate the range of possible values
+  $value: $min + floor($random * $range); // Generate the random value within the range
+
+  // Use the $value variable within the mixin
+  left: #{$value + '%'};
+}
+@mixin randomT($min, $max) {
+  $random: random(); // Generate a random decimal between 0 and 1
+  $range: $max - $min + 1; // Calculate the range of possible values
+  $value: $min + floor($random * $range); // Generate the random value within the range
+
+  // Use the $value variable within the mixin
+  top: #{$value + '%'};
+}

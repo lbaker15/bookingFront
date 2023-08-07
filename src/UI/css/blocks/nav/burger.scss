@@ -1,0 +1,26 @@
+@layer components {
+  .u-burger {
+    &--active {
+      div:nth-child(1) {
+        @apply translate-y-12 rotate-45 animate-burger1;
+      }
+      div:nth-child(2) {
+        @apply opacity-0;
+      }
+      div:nth-child(3) {
+        @apply translate-y-12 -rotate-45 animate-burger2;
+      }
+    }
+    &--closed {
+      div:nth-child(1) {
+        @apply animate-burger3;
+      }
+      div:nth-child(2) {
+        @apply opacity-100;
+      }
+      div:nth-child(3) {
+        @apply animate-burger4;
+      }
+    }
+  }
+}

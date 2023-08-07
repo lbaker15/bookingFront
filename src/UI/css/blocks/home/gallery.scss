@@ -1,0 +1,24 @@
+.b-gallery {
+  &__inner {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  &__image {
+    @apply h-full w-full row-span-2;
+
+    > div {
+      @apply h-full bg-red block origin-center;
+    }
+    &--half {
+      @apply row-span-2 flex items-center;
+      > div {
+        @apply h-full;
+      }
+    }
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+  &__col {
+    @apply flex flex-col;
+  }
+}

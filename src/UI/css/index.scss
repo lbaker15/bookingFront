@@ -1,0 +1,42 @@
+@import './base/fonts';
+@import './tools/mixins';
+
+@import './components/main';
+
+@import './blocks/shared/app.scss';
+@import './blocks/nav/burger.scss';
+
+@import './blocks/home/hero.scss';
+@import './blocks/home/gallery.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply overflow-x-hidden;
+}
+.background { 
+  @apply bg-purple text-pink min-h-screen;
+  &--dark {
+    @apply bg-blackR-100 text-white-100 min-h-screen;
+  }
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.loader::after,
+.loader::before {
+  animation: animloader 2s linear infinite;
+}
+.loader::after {
+  animation-delay: 1s;
+}
