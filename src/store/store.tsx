@@ -99,7 +99,7 @@ export const ContextProvider = ({ children }: any) => {
 
         (async function () {
             const mainUrlData = await fetch(
-                "https://headless.local/wp-json/acf/v2/options/main_url"
+                "https://headless123321.000webhostapp.com/wp-json/acf/v2/options/main_url"
             );
 
             const mainUrlJson = await mainUrlData.json();

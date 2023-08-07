@@ -29,7 +29,7 @@ const Header = ({}: Props) => {
     const { menuState, darkMode } = state;
     const [auth, setAuth] = useState("");
     const { data, error } = useSWR(
-        "https://headless.local/wp-json/wp/v2/menus/header",
+        "https://headless123321.000webhostapp.com/wp-json/wp/v2/menus/header",
         fetcher
     );
     const refHeader = useRef(null);

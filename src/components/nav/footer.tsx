@@ -6,7 +6,7 @@ import { Context, State } from "../../store/store";
 
 const Info = ({ value }: { value: string }) => {
     const { data, errorPhone }: any = useSWR(
-        `https://headless.local/wp-json/acf/v2/options/${value}`,
+        `https://headless123321.000webhostapp.com/wp-json/acf/v2/options/${value}`,
         fetcher
     );
     return (
