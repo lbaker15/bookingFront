@@ -18,7 +18,7 @@ const GalleryImage = React.forwardRef(({ i, item }: any, ref: any) => {
                         scrollTrigger: {
                             start: "top 100%",
                             end: "top 0%",
-                            markers: true,
+
                             scrub: 1,
                             trigger: ref.current,
                         },
