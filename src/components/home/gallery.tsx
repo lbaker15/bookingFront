@@ -7,6 +7,7 @@ const Gallery = ({ data }: any) => {
     const parentRef: any = useRef(null);
     const images = ["", "", "", "", "", "", ""];
     console.log(data);
+    console.log("parentRef", parentRef);
     return (
         <div
             ref={parentRef}

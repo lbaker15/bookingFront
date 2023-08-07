@@ -1,12 +1,12 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useEffect, useRef } from "react";
 
 const GalleryImage = React.forwardRef(({ i, item }: any, ref: any) => {
     const elementRef: any = useRef(null);
     const imageRef: any = useRef(null);
     const num = i % 2 === 1 || i % 7 === 6 ? 100 : -100;
-    useLayoutEffect(() => {
+    useEffect(() => {
         console.log("layout effect");
         const ctx = gsap.context(() => {
             console.log("ctx", elementRef.current, ref.current);
