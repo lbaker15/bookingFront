@@ -2,6 +2,7 @@ import { ChangeEvent, useContext, useEffect, useState } from "react";
 import { CancelBookingMultiple } from "../../hooks/cancelBookingMultiple";
 import Modal from "./modal";
 import { Booking, RefetchFunction } from "./types";
+import Message from "./message";
 
 type ID = {
     _id: string;
@@ -21,20 +22,22 @@ const BookingCancel = ({
     const [modal, setModal] = useState(false);
     const [value, setValue] = useState(1);
     const [ids, setIds] = useState<ID[]>([]);
-
+    const [loader, setLoader] = useState(false);
+    const [message, setMessage] = useState(false);
     const { data, error } = CancelBookingMultiple({ enabled, ids: ids, token });
 
     useEffect(() => {
         if (data && !error && setRerender) {
             setModal(false);
+            setMessage(true);
+            setLoader(false);
             setRerender(Date.now());
         }
     }, [data]);
-    const cancel = () => {
+
+    const handleModal = () => {
         if (!modal) {
             setModal(true);
-        } else {
-            setModal(false);
         }
     };
 
@@ -44,7 +47,8 @@ const BookingCancel = ({
             const id = item.userBookingId;
 
             setEnabled(true);
-            //initloader
+            //init loader
+            setLoader(true);
             setIds([{ _id: id }]);
         } else {
             const array: ID[] = [];
@@ -63,19 +67,26 @@ const BookingCancel = ({
         if (ids.length) {
             setEnabled(true);
             //init loader
+            setLoader(true);
         }
     }, [ids]);
 
     return (
         <>
+            <Message setMessage={setMessage} message={message} />
             <Modal
                 modal={modal}
                 multiple={item.userBookingIds.length > 1}
                 cancel={cancelFunction}
                 setModal={setModal}
+                value={value}
+                loader={loader}
             />
             {item.userBookingIds.length < 2 ? (
-                <button className="text-sm u-button--pink" onClick={cancel}>
+                <button
+                    className="text-sm u-button--pink"
+                    onClick={handleModal}
+                >
                     Cancel booking
                 </button>
             ) : (
@@ -95,7 +106,10 @@ const BookingCancel = ({
                             max={item.userBookingIds.length}
                         />
                     </div>
-                    <button className="text-sm u-button--pink" onClick={cancel}>
+                    <button
+                        className="text-sm u-button--pink"
+                        onClick={handleModal}
+                    >
                         Adjust Booking
                     </button>
                 </div>
