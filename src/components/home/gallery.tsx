@@ -7,7 +7,9 @@ const Image = React.forwardRef(({ i, item }: any, ref: any) => {
     const imageRef: any = useRef(null);
     const num = i % 2 === 1 || i % 7 === 6 ? 100 : -100;
     useLayoutEffect(() => {
+        console.log("layout effect");
         const ctx = gsap.context(() => {
+            console.log("ctx");
             if (elementRef.current && ref.current) {
                 const grow = i % 7 === 2 ? true : false;
                 gsap.fromTo(
