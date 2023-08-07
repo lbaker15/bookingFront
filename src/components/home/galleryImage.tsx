@@ -54,7 +54,7 @@ const GalleryImage = React.forwardRef(({ i, item }: any, ref: any) => {
             }
         });
         return () => ctx.revert();
-    }, []);
+    }, [ref]);
     return (
         <div
             ref={elementRef}
