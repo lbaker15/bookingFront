@@ -14,7 +14,7 @@
 @tailwind utilities;
 
 body {
-  @apply overflow-x-hidden;
+ overflow-x: hidden !important;
 }
 .background { 
   @apply bg-purple text-pink min-h-screen;
