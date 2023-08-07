@@ -12,7 +12,7 @@ const Child = ({ item, i }: any) => {
                 const st = i % 2 === 0 ? -200 : 0;
                 const end = i % 2 === 0 ? 0 : -200;
                 const r = ref.current as any;
-                console.log("move text", r);
+
                 gsap.fromTo(
                     ref.current,
                     { x: st },
