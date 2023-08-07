@@ -40,7 +40,7 @@ const GalleryImage = React.forwardRef(({ i, item }: any, ref: any) => {
                                     start: () =>
                                         mobile ? "top 10%" : "top 5%",
                                     end: `top+=${window.innerHeight * 2} top`,
-                                    // markers: true,
+
                                     scrub: 1,
                                     pin: ref.current,
                                     trigger: ref.current,

@@ -13,10 +13,10 @@ const ScrollTriggerWrapper = ({ children }: any) => {
 
         // Kill ScrollTrigger instances and markers when the component unmounts
         return () => {
-            gsap.registerPlugin(ScrollTrigger);
-            ScrollTrigger.getAll().forEach((trigger) => {
-                trigger.kill();
-            });
+            // gsap.registerPlugin(ScrollTrigger);
+            // ScrollTrigger.getAll().forEach((trigger) => {
+            //     trigger.kill();
+            // });
         };
     }, [location]);
 
