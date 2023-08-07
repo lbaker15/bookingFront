@@ -106,7 +106,12 @@ const Contact = () => {
                 canvasHeight,
                 canvasWidth,
                 20,
-                { isStatic: true }
+                {
+                    isStatic: true,
+                    render: {
+                        fillStyle: "transparent",
+                    },
+                }
             );
             const leftWall = Matter.Bodies.rectangle(
                 0,
@@ -125,7 +130,7 @@ const Contact = () => {
             const circularBoundary = Bodies.circle(
                 canvasWidth / 2,
                 canvasHeight / 2,
-                canvasWidth / 3.5,
+                Math.min(canvasWidth / 3.5, 325),
                 {
                     isStatic: true,
                     restitution: 1,
@@ -183,7 +188,7 @@ const Contact = () => {
 
     return (
         <Motion>
-            <section className="relative block w-full h-screen overflow-hidden bg-purple">
+            <section className="relative mt-[50px] block w-full h-screen overflow-hidden bg-purple">
                 {!completed && <Loader fixed={true} />}
                 <div
                     className="absolute -left-[1%] top-0 block w-[102%] h-full bg-purple"
