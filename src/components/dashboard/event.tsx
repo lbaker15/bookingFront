@@ -1,5 +1,4 @@
 import React, { MouseEvent, useEffect, useLayoutEffect, useState } from 'react';
-import { connect } from 'react-redux';
 import { getCookie } from '../../helpers/main';
 import getStripe from '../../hooks/stripe';
 import { checkout } from '../../helpers/checkout';

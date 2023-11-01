@@ -9,7 +9,7 @@ const TextSection = ({ data }: any) => {
         if (i === 1) {
           return <TextAnimation key={'textAnim' + i} classes='w-full lg:w-1/2  uppercase pr-4 text-4xl mb-8' string={item.row} heading={3} />;
         }
-        return <TextAnimation key={'textAnim' + i} classes='w-full lg:w-1/2  uppercase pr-4 text-6xl mb-6' string={item.row} heading={2} />;
+        return <TextAnimation key={'textAnim' + i} classes='w-full lg:w-1/2 uppercase pr-4 text-6xl mb-6' string={item.row} heading={2} />;
       })}
     </div>
   );

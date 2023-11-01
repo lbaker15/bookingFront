@@ -3,7 +3,6 @@ import { getCookie } from '../../helpers/main';
 import InfiniteScroll from 'react-infinite-scroller'; //
 import { GetBookingsUser } from '../../hooks/getAllBookings';
 import { GetBookingsPage } from '../../hooks/getBookingsPage';
-import { useDispatch } from 'react-redux';
 import { Context, DispatchContext } from '../../store/store';
 import Loader from '../dashboard/loader';
 

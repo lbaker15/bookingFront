@@ -30,9 +30,10 @@
   }
   .background { 
     @apply bg-purple text-pink min-h-screen;
-    &--dark {
+    
+  }
+  .background--dark {
       @apply bg-blackR-100 text-white-100 min-h-screen;
-    }
   }
 
   

@@ -39,7 +39,7 @@ const CTA = ({ data }: any) => {
         </div>
         <div className='relative flex items-center justify-between py-8 mb-20 border-t border-b border-pink dark:border-white-100 group'>
           <Link className='absolute z-20 w-full h-full' to='/contact'></Link>
-          <h3 className='pr-2 text-3xl font-medium uppercase group-hover:italic xl:text-4xl'>{data.acf.category_text}</h3>
+          <h3 className=' pr-2 text-3xl font-medium uppercase group-hover:italic xl:text-4xl'>{data.acf.category_text}</h3>
           <button>
             <Arrow />
           </button>
