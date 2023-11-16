@@ -1,19 +1,19 @@
-@import '../../tools/mixins';
+@import "../../tools/mixins";
 
 .b-hero {
-  &__title {
-    font-size: clamp(10vw, 20vh, 6rem);
-    @media (max-width: 768px) {
-      font-size: clamp(8vw, 15vh, 70px);
-    }
-  }
+	&__title {
+		font-size: clamp(2rem, 15vh, 6rem);
+		@media (max-width: 768px) {
+			font-size: clamp(8vw, 15vh, 70px);
+		}
+	}
 
-  &__parallax {
-    @for $i from 1 through 8 {
-      &:nth-child(#{$i}) {
-        @include randomT(0, 100);
-        @include randomL(0, 100);
-      }
-    }
-  }
+	&__parallax {
+		@for $i from 1 through 8 {
+			&:nth-child(#{$i}) {
+				@include randomT(0, 100);
+				@include randomL(0, 100);
+			}
+		}
+	}
 }
