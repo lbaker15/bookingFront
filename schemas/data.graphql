@@ -1,0 +1,43 @@
+type Data {
+  title: String
+  _id: ID!
+  userId: String
+  eventId: String
+  pi: String
+  multipleBooking: Boolean
+}
+scalar JSON
+
+type DataEdit {
+  title: String
+  _id: ID!
+  userId: String
+  eventId: String
+  event: Event
+  user: User
+  multipleBooking: Boolean
+  pi: String
+}
+type DataPagination {
+  results: [DataEdit]
+  count: Int
+  eventTotals: [JSON]
+  hasMore: Boolean
+}
+type DataDeleted {
+  deletedCount: Int
+  acknowledged: Boolean
+}
+input CreateData {
+  title: String!
+  userId: ID
+  eventId: ID!
+  count: Int
+  session: String
+}
+input DeleteData {
+  id: ID!
+}
+input DeleteDataMultiple {
+  _id: ID
+}

@@ -1,0 +1,26 @@
+type User {
+  _id: ID!
+  name: String!
+  email: String
+  password: String
+  admin: String
+  data: [Data]
+  events: [Event]
+}
+input CreateUser {
+  name: String!
+  email: String
+  password: String
+  admin: String
+}
+input UserBookingIds {
+  id: ID!
+}
+input EditUser {
+  id: ID!
+  data: [UserBookingIds]
+}
+input ChangePassword {
+  password: String!
+  newPassword: String!
+}

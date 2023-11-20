@@ -1,0 +1,51 @@
+[
+  {
+    "id": "j6uGzp-sfJ420OnDsAINK",
+    "name": "Gala",
+    "bookings": [
+      "6pA3yu8ha4GRVtc0YBBz0",
+      "jZYFB6X_vEGDoIlQ5f9fJ",
+      "wkNsCSDTZFCStpilWiLkB",
+      "vQmGB6ZxKKkRTwgxTfWiY",
+      "7FC7xm9n4vIX_M3JPbIqO"
+    ],
+    "address": "123 fake",
+    "userId": "X5692XAGWLDWHrAuVYmyh",
+    "time": "timestamp",
+    "lat": 3213,
+    "lng": 4324,
+    "description": "lorem ipsum"
+  },
+  {
+    "id": "zmx-pvEOmX61IHEP2NsGl",
+    "name": "Gig",
+    "bookings": [
+      "f6I-2Is9GkWJ8S66SoOyV",
+      "RKsGpF3dpZucwVViMWMCR",
+      "CnnOQaxaGABcgzfnln3J0",
+      "x-pjVkZZHpDdiY3Db7wix",
+      "QuzoD6FwmCYN7B65TE3KN"
+    ],
+    "userId": "X5692XAGWLDWHrAuVYmyh",
+    "time": "timestamp",
+    "address": "123 fake",
+    "lat": 3213,
+    "lng": 4324,
+    "description": "lorem ipsum"
+  },
+  {
+    "id": "RGJzgXQkPx3SiSfrRj62E",
+    "name": "Gig",
+    "bookings": [
+      "ijw6P7ZceIPJF5oGRvcOI",
+      "XDyQeQH7MPkpSZs-GmAsQ",
+      "n583q95nlYxSNmy3nXSHh"
+    ],
+    "userId": "X5692XAGWLDWHrAuVYmyh",
+    "time": "timestamp",
+    "address": "123 fake",
+    "lat": 432,
+    "lng": 432,
+    "description": "lorem ipsum"
+  }
+]

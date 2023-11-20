@@ -1,0 +1,55 @@
+scalar Upload
+scalar BigInt
+type Event {
+  _id: ID!
+  name: String!
+  bookings: [Data]
+  time: BigInt
+  lat: Int
+  lng: Int
+  address: String
+  category: [String]
+  description: String
+  userId: User
+  tickets: Int
+  image: String
+  imgUrl: String
+  price: String
+}
+
+type EventUser {
+  _id: ID
+  name: String
+  time: BigInt
+  lat: Int
+  lng: Int
+  imgUrl: String
+  address: String
+  description: String
+  userId: User
+  userBookingId: ID
+}
+type FutureEvents {
+  results: [Event]
+  images: [String]
+  hasMore: Boolean
+  count: Int
+}
+input CreateEvent {
+  name: String!
+  userId: ID
+  time: BigInt
+  tickets: Int
+  lat: Int
+  category: [String]
+  lng: Int
+  address: String
+  description: String
+  file: Upload
+  price: String
+}
+
+input EventFutureInput {
+  timestamp: BigInt!
+  num: Int
+}

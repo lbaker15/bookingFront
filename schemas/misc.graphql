@@ -1,0 +1,11 @@
+scalar Upload
+type File {
+  url: String
+}
+type FileUploadResponse {
+  ETag: String!
+  Location: String!
+  key: String!
+  Key: String!
+  Bucket: String!
+}
