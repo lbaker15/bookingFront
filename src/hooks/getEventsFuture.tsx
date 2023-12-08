@@ -30,7 +30,7 @@ const query2 = gql`
     }
 `;
 
-export const GetEventsFuture = ({ token, timestamp, num, dispatch }: any) => {
+export const GetEventsFuture = ({  timestamp, dispatch }: any) => {
     const p: any = useContext(Context);
 
     const input = { timestamp, num: p.state.scroll };

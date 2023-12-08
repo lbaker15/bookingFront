@@ -16,50 +16,45 @@ const TextSection = React.lazy(() => import("./textSection"));
 
 type Props = {};
 const Home = ({}: Props) => {
-    const { data, error } = useSWR(
-        "https://headless123321.000webhostapp.com/wp-json/wp/v2/pages/5/?acf",
-        fetcher
-    );
+	const { data, error } = useSWR(
+		"https://headless123321.000webhostapp.com/wp-json/wp/v2/pages/5/?acf",
+		fetcher
+	);
 
-    return (
-        <>
-            <Motion>
-                <Suspense fallback={<Loader />}>
-                    {data && !error && (
-                        <>
-                            <Hero data={data} />
-                            <div className="py-20 pt-40">
-                                <TextSection data={data} />
-                                <Gallery data={data.acf.gallery} />
-                                <div className="my-40 u-wrapper">
-                                    <div className="flex w-full">
-                                        <Image
-                                            half={false}
-                                            image={data.acf.image_one}
-                                        />
-                                    </div>
-                                    <div className="w-full flex justify-end mt-[25px] pb-20  lg:-mt-[50px]">
-                                        <Image
-                                            half={true}
-                                            image={data.acf.image_two}
-                                        />
-                                    </div>
-                                    <TextAnimation
-                                        string={data.acf.closing_text}
-                                        classes="text-2xl uppercase pb-20 lg:text-4xl w-full lg:w-1/2"
-                                        heading={3}
-                                        clip={true}
-                                    />
-                                </div>
-                                <MovingText data={data} />
-                                <CTA data={data} />
-                            </div>
-                        </>
-                    )}
-                </Suspense>
-            </Motion>
-        </>
-    );
+	console.log(data);
+	return (
+		<>
+			<Motion>
+				<Suspense fallback={<Loader />}>
+					{data && !error && (
+						<>
+							<Hero data={data} />
+							<div className="py-20 pt-40">
+								<TextSection data={data} />
+								<Gallery data={data.acf.gallery} />
+								<div className="my-40 u-wrapper">
+									<div className="flex w-full">
+										<Image half={false} image={data.acf.image_one} />
+									</div>
+									<div className="w-full flex justify-end mt-[25px] pb-20  lg:-mt-[50px]">
+										<Image half={true} image={data.acf.image_two} />
+									</div>
+									<TextAnimation
+										string={data.acf.closing_text}
+										classes="text-2xl uppercase pb-20 lg:text-4xl w-full lg:w-1/2"
+										heading={3}
+										clip={true}
+									/>
+								</div>
+								<MovingText data={data} />
+								<CTA data={data} />
+							</div>
+						</>
+					)}
+				</Suspense>
+			</Motion>
+		</>
+	);
 };
 
 export default Home;
